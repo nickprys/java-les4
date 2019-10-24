@@ -1,0 +1,28 @@
+package com.epam.lesson4;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        String name = "National Aviation University";
+        String result = getAbr(name);
+        
+
+    }
+    public  static  String getAbr(String text) {
+        String result = ""   + text.charAt(0);
+
+        int index =  text.indexOf(' ');
+        result = result + text.charAt(index + 1);
+
+        index = text.indexOf(' ', index + 1);
+
+        result = result + text.charAt(index + 1);
+
+        return  result;
+
+
+    }
+    
+
+}
